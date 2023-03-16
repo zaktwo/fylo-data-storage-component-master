@@ -122,8 +122,13 @@ body {
                 Top Card
 *******************************************/
 .logo {
+    margin-bottom: 1.5rem;
 }
 .files-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 /*******************************************
                 Bottom Card
