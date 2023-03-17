@@ -9,6 +9,7 @@
   --Grayish-Blue: hsl(229, 7%, 55%);
   --Dark-Blue: hsl(228, 56%, 26%);
   --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --Very-Dark-Blue-07: hsla(229, 57%, 11%,0.7);
 
   --font-familly-raleway: "Raleway", sans-serif;
 }
@@ -78,7 +79,18 @@ You need to define the width of the element you are centering, not the parent el
 html{
     height: 100%;
 }
+
+/*******************************
+    to center the card using flexbox 
+    you need to declare body display flex
+    and center it so the container of 
+    the card takes the width of the content not 
+    the width of the entire body
+*******************************/
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
     font-family: var(--font-familly-raleway);
     background-color: var(--Dark-Blue);
     background-image: url(./images/bg-mobile.png), url(./images/bg-mobile.png);
@@ -95,6 +107,8 @@ body {
   flex-direction: column;
   height: 100%;
   /* margin-top: 7%; */
+  border: 5px solid orangered;
+  
 }
 .shared-card {
   display: flex;
@@ -104,19 +118,24 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   flex-direction: column;
+  /* min-width: 23em; */
+
 }
 .top-card {
-  justify-content: start;
-  align-items: start;
+  display: flex;
+  /* justify-content: start;
+  align-items: start; */
   border-top-right-radius: 5rem;
   padding-right: 5rem;
   margin-bottom: 1rem;
-  width: auto;
-  
+  width: 100%;
+  border: 5px solid black;
 }
 .bottom-card {
   justify-content: center;
   align-items: center;
+  position: relative;
+  border: 5px solid yellow;
 }
 /*******************************************
                 Top Card
@@ -129,11 +148,88 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    border: 5px solid yellowgreen;
+}
+.shared-back{
+  background-color: var(--Very-Dark-Blue);
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 1rem;
+  flex: 1;
+  height: 100%;
+  width: 100%;
 }
 /*******************************************
                 Bottom Card
 *******************************************/
+.remaining-storage{
+  color: var(--Pale-Blue);
+  margin-bottom: 1rem;
+}
+.remaining-storage > span{
+  font-weight: 700;
+}
+/********PROGRESS BAR*************************/
+.progress-bar{
+ min-width: 100%;
+ border-radius: 10px;
+ border: 2px solid green;
+ margin-bottom: 4rem;
 
+}
+.progress-background{
+  margin-bottom: 0.4rem;
+  background-color: var(--Very-Dark-Blue-07) ;
+  border: 2px solid brown;
+  min-width: 100%;
+  min-height: 60%;
+  border-radius: 10px;
+  z-index: 0;
+}
+.limits{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: row;
+ border: 2px solid red;
+}
+
+.progress-flow{
+  display: flex;
+  
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 70%;
+  height: auto;
+  border: 2px solid greenyellow;
+  z-index: 2;
+}
+/*************END OF PROGRESS BAR*************/
+.remaining-upload{
+background-color: var(--Pale-Blue);
+border-radius: 5px;
+padding: 0.5rem;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+font-weight: 700;
+font-size: 2.5rem;
+position: absolute;
+bottom: -2.5rem;
+margin-left: auto;
+margin-right: auto;
+}
+/******************************
+    To center a div using position:absolute; there is trick 
+    margin-left: auto; and margin-right:auto; 
+    will do the trick better then going all day figuring out what 
+    magic number u need to guess to make it work
+******************************/
+.gb-left{
+  color: var(--Grayish-Blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  
+}
 /*******************************************
                 Media Querie
 *******************************************/
