@@ -169,7 +169,7 @@ body {
 .remaining-storage > span{
   font-weight: 700;
 }
-/********PROGRESS BAR*************************/
+/**********************PROGRESS BAR*************************/
 .progress-bar{
  min-width: 100%;
  border-radius: 10px;
@@ -233,14 +233,44 @@ margin-right: auto;
 /*******************************************
                 Media Querie
 *******************************************/
-@media (min-width: 500px){
+@media (min-width: 850px){
     .container{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
-    }
+        height: fit-content;  
+        -moz-width: -moz-fit-content;
+        width: fit-content;
+      }
     .top-card{
         margin-right: 1.5rem;
+        min-width: 50%;
+    }
+    .shared-back{
+      width: 100%;
+      height: 100%;
+    }
+    .bottom-card{
+      display: flex;
+      min-width: 70%;
+      position: relative;
+      margin-bottom: -20px;
+    }
+    .remaining-upload{
+      display: flex;
+      position: absolute;
+      top: -3.6rem; 
+      right: 2rem;
+      padding-bottom: 0.5rem;
+      bottom: revert;
+    }
+    .progress-bar{
+      margin-bottom: 0;
+    }
+    .gb-left{
+      display: flex;
+      align-items: center;
+  
     }
 }
