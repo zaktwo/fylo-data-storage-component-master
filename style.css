@@ -159,6 +159,30 @@ body {
   height: 100%;
   width: 100%;
 }
+.document{
+  height: 100%;
+  transition: transform 0.5s;
+}
+.document:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.folder{
+  height: 100%;
+  transition: transform 0.5s;
+}
+.folder:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.upload{
+  height: 100%;
+  transition: transform 0.5s;
+}
+.upload:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 /*******************************************
                 Bottom Card
 *******************************************/
@@ -169,6 +193,8 @@ body {
 }
 .remaining-storage > span{
   font-weight: 700;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 /**********************PROGRESS BAR*************************/
 /***********To make a progress bar you need to make a div contained
@@ -290,8 +316,9 @@ margin-right: auto;
       height: 100%;
       /* background-size: 100%;
       /* justify-content: stretch; */
-      align-items: stretch; 
+      /* align-items: stretch; 
       justify-content: stretch;
+  */
     }
     .bottom-card{
       display: flex;
@@ -300,9 +327,8 @@ margin-right: auto;
       margin-bottom: -20px;
     }
     .remaining-storage{
-      display: flex;
-      justify-content: start;
-      align-items: start;
+     align-self: start;
+ 
     }
     .remaining-upload{
       display: flex;
