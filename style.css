@@ -165,6 +165,7 @@ body {
 .remaining-storage{
   color: var(--Pale-Blue);
   margin-bottom: 1rem;
+
 }
 .remaining-storage > span{
   font-weight: 700;
@@ -175,16 +176,30 @@ body {
  border-radius: 10px;
  border: 2px solid green;
  margin-bottom: 4rem;
-
+height: 100%;
 }
 .progress-background{
+  display: flex;
+  justify-content: start;
+  align-items: center;
   margin-bottom: 0.4rem;
   background-color: var(--Very-Dark-Blue-07) ;
   border: 2px solid brown;
-  min-width: 100%;
-  min-height: 60%;
+  width: 100%;
+  height: 17px;
   border-radius: 10px;
   z-index: 0;
+}
+.progress-flow{
+  display: flex;
+  
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 70%;
+  height: 10px;
+  border: 2px solid greenyellow;
+  z-index: 2;
+  border-radius: 10px;
+  
 }
 .limits{
  display: flex;
@@ -192,17 +207,10 @@ body {
  align-items: center;
  flex-direction: row;
  border: 2px solid red;
+ color: var(--Pale-Blue);
 }
 
-.progress-flow{
-  display: flex;
-  
-  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  width: 70%;
-  height: auto;
-  border: 2px solid greenyellow;
-  z-index: 2;
-}
+
 /*************END OF PROGRESS BAR*************/
 .remaining-upload{
 background-color: var(--Pale-Blue);
@@ -250,12 +258,20 @@ margin-right: auto;
     .shared-back{
       width: 100%;
       height: 100%;
+      /* background-size: 100%;
+      /* justify-content: stretch; */
+      align-items: stretch; 
     }
     .bottom-card{
       display: flex;
       min-width: 70%;
       position: relative;
       margin-bottom: -20px;
+    }
+    .remaining-storage{
+      display: flex;
+      justify-content: start;
+      align-items: start;
     }
     .remaining-upload{
       display: flex;
@@ -264,6 +280,7 @@ margin-right: auto;
       right: 2rem;
       padding-bottom: 0.5rem;
       bottom: revert;
+     border: 10% / 20px;;
     }
     .progress-bar{
       margin-bottom: 0;
