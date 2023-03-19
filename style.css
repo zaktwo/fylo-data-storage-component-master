@@ -9,7 +9,7 @@
   --Grayish-Blue: hsl(229, 7%, 55%);
   --Dark-Blue: hsl(228, 56%, 26%);
   --Very-Dark-Blue: hsl(229, 57%, 11%);
-  --Very-Dark-Blue-07: hsla(229, 57%, 11%,0.7);
+  --Very-Dark-Blue-07: hsla(229, 57%, 11%, 0.7);
 
   --font-familly-raleway: "Raleway", sans-serif;
 }
@@ -20,49 +20,65 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 /*******************************************
                 Shared CSS
 *******************************************/
@@ -76,8 +92,8 @@ You need to define the width of the element you are centering, not the parent el
     width: 90%;
 }
 ******/
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
 /*******************************
@@ -91,15 +107,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-    font-family: var(--font-familly-raleway);
-    background-color: var(--Dark-Blue);
-    background-image: url(./images/bg-mobile.png), url(./images/bg-mobile.png);
-    background-repeat: no-repeat;
-    background-position: 0px top, 250px top;
-    background-size: 100%;
-    height: 100%;
-  }
-  
+  font-family: var(--font-familly-raleway);
+  background-color: var(--Dark-Blue);
+  background-image: url(./images/bg-mobile.png), url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-position: 0px top, 250px top;
+  background-size: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -108,7 +124,6 @@ body {
   height: 100%;
   /* margin-top: 7%; */
   /* border: 5px solid orangered; */
-  
 }
 .shared-card {
   display: flex;
@@ -119,7 +134,6 @@ body {
   border-radius: 1rem;
   flex-direction: column;
   /* min-width: 23em; */
-
 }
 .top-card {
   display: flex;
@@ -141,16 +155,16 @@ body {
                 Top Card
 *******************************************/
 .logo {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .files-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    /* border: 5px solid yellowgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  /* border: 5px solid yellowgreen; */
 }
-.shared-back{
+.shared-back {
   background-color: var(--Very-Dark-Blue);
   padding: 10px;
   border-radius: 5px;
@@ -159,39 +173,38 @@ body {
   height: 100%;
   width: 100%;
 }
-.document{
+.document {
   height: 100%;
   transition: transform 0.5s;
 }
-.document:hover{
+.document:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.folder{
+.folder {
   height: 100%;
   transition: transform 0.5s;
 }
-.folder:hover{
+.folder:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.upload{
+.upload {
   height: 100%;
   transition: transform 0.5s;
 }
-.upload:hover{
+.upload:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 /*******************************************
                 Bottom Card
 *******************************************/
-.remaining-storage{
+.remaining-storage {
   color: var(--Pale-Blue);
   margin-bottom: 1rem;
-
 }
-.remaining-storage > span{
+.remaining-storage > span {
   font-weight: 700;
   margin-left: 4px;
   margin-right: 4px;
@@ -200,26 +213,26 @@ body {
 /***********To make a progress bar you need to make a div contained
 in another div define the height of the two divs center them using
 flex postion the other divs abolute relative to the parent div*************/
-.progress-bar{
- min-width: 100%;
- border-radius: 10px;
- /* border: 2px solid green; */
- margin-bottom: 4rem;
-height: 100%;
+.progress-bar {
+  min-width: 100%;
+  border-radius: 10px;
+  /* border: 2px solid green; */
+  margin-bottom: 4rem;
+  height: 100%;
 }
-.progress-background{
+.progress-background {
   display: flex;
   justify-content: start;
   align-items: center;
   margin-bottom: 0.4rem;
-  background-color: var(--Very-Dark-Blue-07) ;
+  background-color: var(--Very-Dark-Blue-07);
   /* border: 2px solid brown; */
   width: 100%;
   height: 17px;
   border-radius: 10px;
   z-index: 0;
 }
-.progress-flow{
+.progress-flow {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -233,7 +246,7 @@ height: 100%;
   left: 2px;
   animation: progress-flow 1s linear forwards;
 }
-.circle{
+.circle {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -245,34 +258,34 @@ height: 100%;
   position: absolute;
   right: 3px;
 }
-.limits{
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-direction: row;
- /* border: 2px solid red; */
- color: var(--Pale-Blue);
- font-weight: 400;
+.limits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  /* border: 2px solid red; */
+  color: var(--Pale-Blue);
+  font-weight: 400;
 }
 @keyframes progress-flow {
-  100%{
+  100% {
     width: 70%;
   }
 }
 
 /*************END OF PROGRESS BAR*************/
-.remaining-upload{
-background-color: var(--Pale-Blue);
-border-radius: 5px;
-padding: 0.5rem;
-padding-left: 1.5rem;
-padding-right: 1.5rem;
-font-weight: 700;
-font-size: 2.5rem;
-position: absolute;
-bottom: -2.5rem;
-margin-left: auto;
-margin-right: auto;
+.remaining-upload {
+  background-color: var(--Pale-Blue);
+  border-radius: 5px;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: -2.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 /******************************
     To center a div using position:absolute; there is trick 
@@ -280,82 +293,83 @@ margin-right: auto;
     will do the trick better then going all day figuring out what 
     magic number u need to guess to make it work
 ******************************/
-.gb-left{
+.gb-left {
   color: var(--Grayish-Blue);
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  
 }
 /*******************************************
                 Media Querie
 *******************************************/
-@media (min-width: 850px){
-    .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        height: fit-content;  
-        -moz-width: -moz-fit-content;
-        width: fit-content;
-      }
-    .top-card{
-        margin-right: 1.5rem;
-        min-width: 50%;
-    }
-    .files-card{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      flex: 1;
-    }
-    .shared-back{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      /* background-size: 100%;
+@media (min-width: 850px) {
+  body {
+    background: bottom url('./images/bg-desktop.png') no-repeat, hsl(229, 57%, 11%);
+    background-size: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: fit-content;
+    -moz-width: -moz-fit-content;
+    width: fit-content;
+  }
+  .top-card {
+    margin-right: 1.5rem;
+    min-width: 50%;
+  }
+  .files-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+  .shared-back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-size: 100%;
       /* justify-content: stretch; */
-      /* align-items: stretch; 
+    /* align-items: stretch; 
       justify-content: stretch;
   */
-    }
-    .bottom-card{
-      display: flex;
-      min-width: 70%;
-      position: relative;
-      margin-bottom: -20px;
-    }
-    .remaining-storage{
-     align-self: start;
- 
-    }
-    .remaining-upload{
-      display: flex;
-      position: absolute;
-      top: -3.6rem; 
-      right: 2rem;
-      padding-bottom: 0.5rem;
-      bottom: revert;
-     border: 10% / 20px;;
-    }
-    .remaining-upload::before{
-      content: "";
-      position: absolute;
-      background: var(--Pale-Blue);
-      width: 30px;
-      height: 20px;
-      bottom: 0;
-      right: 0;
-      transform: skew(180deg, 34deg);
-      overflow: hidden;
-    }
-    .progress-bar{
-      margin-bottom: 0;
-    }
-    .gb-left{
-      display: flex;
-      align-items: center;
-  
-    }
+  }
+  .bottom-card {
+    display: flex;
+    min-width: 70%;
+    position: relative;
+    margin-bottom: -20px;
+  }
+  .remaining-storage {
+    align-self: start;
+  }
+  .remaining-upload {
+    display: flex;
+    position: absolute;
+    top: -3.6rem;
+    right: 2rem;
+    padding-bottom: 0.5rem;
+    bottom: revert;
+    border: 10% / 20px;
+  }
+  .remaining-upload::before {
+    content: "";
+    position: absolute;
+    background: var(--Pale-Blue);
+    width: 30px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    transform: skew(180deg, 34deg);
+    overflow: hidden;
+  }
+  .progress-bar {
+    margin-bottom: 0;
+  }
+  .gb-left {
+    display: flex;
+    align-items: center;
+  }
 }
