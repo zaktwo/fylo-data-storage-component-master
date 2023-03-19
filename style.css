@@ -107,7 +107,7 @@ body {
   flex-direction: column;
   height: 100%;
   /* margin-top: 7%; */
-  border: 5px solid orangered;
+  /* border: 5px solid orangered; */
   
 }
 .shared-card {
@@ -129,13 +129,13 @@ body {
   padding-right: 5rem;
   margin-bottom: 1rem;
   width: 100%;
-  border: 5px solid black;
+  /* border: 5px solid black; */
 }
 .bottom-card {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 5px solid yellow;
+  /* border: 5px solid yellow; */
 }
 /*******************************************
                 Top Card
@@ -148,7 +148,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    border: 5px solid yellowgreen;
+    /* border: 5px solid yellowgreen; */
 }
 .shared-back{
   background-color: var(--Very-Dark-Blue);
@@ -171,10 +171,13 @@ body {
   font-weight: 700;
 }
 /**********************PROGRESS BAR*************************/
+/***********To make a progress bar you need to make a div contained
+in another div define the height of the two divs center them using
+flex postion the other divs abolute relative to the parent div*************/
 .progress-bar{
  min-width: 100%;
  border-radius: 10px;
- border: 2px solid green;
+ /* border: 2px solid green; */
  margin-bottom: 4rem;
 height: 100%;
 }
@@ -184,7 +187,7 @@ height: 100%;
   align-items: center;
   margin-bottom: 0.4rem;
   background-color: var(--Very-Dark-Blue-07) ;
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
   width: 100%;
   height: 17px;
   border-radius: 10px;
@@ -195,34 +198,41 @@ height: 100%;
   justify-content: end;
   align-items: center;
   background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  width: 70%;
-  height: 10px;
-  border: 2px solid greenyellow;
+  width: 0;
+  height: 13px;
+  /* border: 2px solid greenyellow; */
   z-index: 2;
   border-radius: 10px;
   position: relative;
+  left: 2px;
+  animation: progress-flow 1s linear forwards;
 }
 .circle{
   display: flex;
   justify-content: end;
   align-items: center;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--Pale-Blue);
   z-index: 3;
   position: absolute;
-  margin-right: 0;
+  right: 3px;
 }
 .limits{
  display: flex;
  justify-content: space-between;
  align-items: center;
  flex-direction: row;
- border: 2px solid red;
+ /* border: 2px solid red; */
  color: var(--Pale-Blue);
+ font-weight: 400;
 }
-
+@keyframes progress-flow {
+  100%{
+    width: 70%;
+  }
+}
 
 /*************END OF PROGRESS BAR*************/
 .remaining-upload{
