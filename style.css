@@ -337,7 +337,7 @@ flex postion the other divs abolute relative to the parent div*************/
   }
   .bottom-card {
     display: flex;
-    min-width: 70%;
+    min-width: 100%;
     position: relative;
     /* margin-bottom: -20px; */
   }
@@ -350,6 +350,7 @@ flex postion the other divs abolute relative to the parent div*************/
     top: -3.6rem;
     right: 2rem;
     padding-bottom: 0.5rem;
+    padding-right: 2rem;
     bottom: revert;
     border: 10% / 20px;
   }
@@ -357,8 +358,8 @@ flex postion the other divs abolute relative to the parent div*************/
     content: "";
     position: absolute;
     background: var(--Pale-Blue);
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 35px;
     bottom: 0;
     right: 0;
     transform: skew(180deg, 34deg);
